@@ -22,13 +22,25 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <p id="selfintro">
-        Hi, My name is garric, working as a game developer now!
-    </p>
+    <div class="navigation">
+          <ul>
+              <li class="navtab" title="ported from learnopengl">LearnWebGL</li>
+              <li class="navtab">ComingSoon</li>
+              <li class="navtab">Bio</li>
+          </ul>
+    </div>
 
-    <div id="canvasContainer">
-        <canvas id="canvas" width="800" height="600"></canvas>
-        <div id="canvasNotSupport"></div>
+    <div id="container">
+        <div class="contentContainer">
+            <canvas id="canvas" width="800" height="600"></canvas>
+            <div id="canvasNotSupport"></div>
+        </div>
+        <div class="contentContainer">
+
+        </div>
+        <div class="contentContainer">
+              <p id="selfintro">Hi, My name is garric, working as a game developer now!</p>
+        </div>
     </div>
     <!-- <div class="loader"></div> -->
     <script>
