@@ -3,15 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <!-- <meta http-equiv="content-type" content="text/html;charset=utf-8"/> -->
+    <!-- ref: http://sanwen.net/a/abcbnqo.html -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+
     <title>beyond A9</title>
-	
-	<link rel="stylesheet" href="assets/loader.css">
+
+    <!-- css files, font files  -->
+	<!-- <link rel="stylesheet" href="assets/loader.css"> -->
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+
+    <!-- external libs -->
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+
+    <!-- custom files -->
+    <script src="main.js"></script>
 </head>
 <body>
-Hi, My name is garric, working as a game developer now!
-Music Visualization copys from http://mattdesl.github.io/codevember/
-  <div class="loader"></div>
-  <script src="main.js"></script>
+    <p id="selfintro">
+        Hi, My name is garric, working as a game developer now!
+    </p>
+
+    <div id="canvasContainer">
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="canvasNotSupport"></div>
+    </div>
+    <!-- <div class="loader"></div> -->
+    <script>
+         $(document).ready(run);
+    </script>
 </body>
 </html>
