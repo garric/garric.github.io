@@ -30,6 +30,9 @@ li {
 li:hover {
     color: #aaa;
 }
+li:active {
+    color: #00ff00;
+}
 
 #selfintro {
     text-align: center;
@@ -78,4 +81,11 @@ li:hover {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.musiclink {
+    display: block;
+    margin: auto;
+    width: 200px;
+    text-align: center;
 }

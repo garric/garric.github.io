@@ -28,4 +28,5 @@ function run() {
     learnWebGL.init();
     containers[0].style.display = 'block';
     containers[0].style.visibility = 'visible';
+    tabs[0].style.color = '#56A';
 }
