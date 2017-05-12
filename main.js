@@ -29,4 +29,24 @@ function run() {
     containers[0].style.display = 'block';
     containers[0].style.visibility = 'visible';
     tabs[0].className = "navtab_active";
+
+    startTicker(sys.$ticker);
+}
+
+function startTicker (ticker) {
+    var requestAnimationFrame = window["requestAnimationFrame"] ||
+        window["webkitRequestAnimationFrame"] ||
+        window["mozRequestAnimationFrame"] ||
+        window["oRequestAnimationFrame"] ||
+        window["msRequestAnimationFrame"];
+    if (!requestAnimationFrame) {
+        requestAnimationFrame = function (callback) {
+            return window.setTimeout(callback, 1000 / 60);
+        };
+    }
+    requestAnimationFrame.call(window, onTick);
+    function onTick() {
+        ticker.update();
+        requestAnimationFrame.call(window, onTick);
+    }
 }

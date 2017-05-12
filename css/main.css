@@ -13,6 +13,7 @@ body, html {
     margin: 10px 0px;
 }
 
+/* TODO: responsive for mobile https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
 .navigation ul {
     list-style-type: none;
     margin: 0;
@@ -65,6 +66,37 @@ body, html {
     height: 100%;
 }
 
+.contentContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/*
+* webgl container
+*/
+#webglContainer {
+    font-size: 0px;   /* ref https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+}
+
+#webglNav {
+    position: relative;
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+    border: 2px solid #4CAF50;
+    display: inline-block;
+    margin-right: -4px;
+    font-size: 16px;
+}
+
+#webglContent {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    font-size: 16px;
+}
+
 #canvas {
     position: relative;
     display: block;
@@ -96,6 +128,9 @@ body, html {
     transform: translateY(-50%);
 }
 
+/*
+* music container
+*/
 .musiclink {
     display: block;
     margin: auto;

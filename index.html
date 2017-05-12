@@ -17,8 +17,13 @@
     <!-- external libs -->
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
 
-    <!-- custom files -->
+    <!-- framework -->
+    <script type="text/javascript" src="src/framework/SystemTicker.js"></script>
+
+    <!-- project files -->
     <script src="projects/learnWebGL/learnWebGL.js"></script>
+
+    <!-- main -->
     <script src="main.js"></script>
 </head>
 <body>
@@ -33,9 +38,13 @@
     </div>
 
     <div id="container">
-        <div class="contentContainer">
-            <canvas id="canvas" width="800" height="600"></canvas>
-            <div id="canvasNotSupport"></div>
+        <div class="contentContainer" id="webglContainer">
+            <div id="webglNav">
+            </div>
+            <div id="webglContent">
+                <canvas id="canvas" width="800" height="600"></canvas>
+                <div id="canvasNotSupport"></div>
+            </div>
         </div>
         <div class="contentContainer">
              <a href="https://tympanus.net/Development/MusicalInteractions/" target="_blank" class="musiclink">Musical Interactions</a>
