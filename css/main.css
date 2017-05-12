@@ -13,25 +13,36 @@ body, html {
     margin: 10px 0px;
 }
 
-ul {
+.navigation ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /* position: fixed; */
+    width: 100%;
 }
 
-li {
+.navigation li {
     font-weight: 100;
     letter-spacing: 2px;
-    padding: 20px 0px;
+    color: white;
+    text-align: center;
     text-transform: uppercase;
-    margin: 0px 20px;
+
+    width: 160px;
+    padding: 20px 0px;
+    /* margin: 0px 20px; */
     display:inline-block;
+    /*border: 2px solid #FF0000;*/
 }
 
-li:hover {
-    color: #aaa;
+.navigation li:hover:not(.navtab_active) {
+    background-color: #111;
 }
-li:active {
-    color: #00ff00;
+
+.navigation .navtab_active {
+    background-color: #4CAF50;
 }
 
 #selfintro {

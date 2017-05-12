@@ -11,7 +11,7 @@ function run() {
         for  (var i = 0; i < tabs.length; i++) {
             containers[i].style.display = 'none';
             containers[i].style.visibility = 'hidden';
-            tabs[i].style.color = '#000';
+            tabs[i].className = "navtab";
 
             if (tab == tabs[i]) {
                 index = i;
@@ -20,7 +20,7 @@ function run() {
         if (index >= 0) {
             containers[index].style.display = 'block';
             containers[index].style.visibility = 'visible';
-            tabs[index].style.color = '#56A';
+            tabs[index].className = "navtab_active";
         }
 
     });
@@ -28,5 +28,5 @@ function run() {
     learnWebGL.init();
     containers[0].style.display = 'block';
     containers[0].style.visibility = 'visible';
-    tabs[0].style.color = '#56A';
+    tabs[0].className = "navtab_active";
 }
