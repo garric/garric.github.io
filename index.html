@@ -13,12 +13,16 @@
     <!-- css files, font files  -->
 	<!-- <link rel="stylesheet" href="assets/loader.css"> -->
     <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="css/sidebar.css" type="text/css" rel="stylesheet">
 
     <!-- external libs -->
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- framework -->
     <script type="text/javascript" src="src/framework/SystemTicker.js"></script>
+
+    <!-- ui -->
+    <script type="text/javascript" src="src/ui/control/sidebar.js"></script>
 
     <!-- project files -->
     <script src="projects/learnWebGL/learnWebGL.js"></script>
@@ -40,6 +44,34 @@
     <div id="container">
         <div class="contentContainer" id="webglContainer">
             <div id="webglNav">
+                <div id="my_menu" class="sdmenu">
+                    <div>
+                        <span>JS代码</span>
+                        <a href="http://51xuediannao.com/JS/nav/">CSS导航</a>
+                        <a href="http://51xuediannao.com/JS/Slide/">焦点图片</a>
+                        <a href="http://51xuediannao.com/JS/AD/">JS广告代码</a>
+                        <a href="http://51xuediannao.com/JS/texiao/">网页特效JS</a>
+                    </div>
+
+                    <div>
+                        <span>欣赏借鉴</span>
+                        <a href="http://51xuediannao.com/show/qiye/">企业类网站</a>
+                        <a href="http://51xuediannao.com/show/blog/">博客类网站</a>
+                        <a href="http://51xuediannao.com/show/shop/">商城类网站</a>
+                    </div>
+                    <div>
+                        <span>建站技巧</span>
+                        <a href="http://51xuediannao.com/jiqiao/html/">HTML技巧</a>
+                        <a href="http://51xuediannao.com/jiqiao/css/">CSS技巧</a>
+                        <a href="http://51xuediannao.com/jiqiao/cms/">CMS技巧</a>
+                    </div>
+                    <div>
+                        <span>懒人建站</span>
+                        <a href="http://51xuediannao.com/HTML+CSS/">HTML+CSS模板</a>
+                        <a href="http://51xuediannao.com/SEO/">SEO优化</a>
+                    </div>
+                </div>
+            </div>
             </div>
             <div id="webglContent">
                 <canvas id="canvas" width="800" height="600"></canvas>
@@ -51,7 +83,32 @@
              <a href="https://learningmusic.ableton.com/index.html" target="_blank" class="musiclink">Learning Music</a>
         </div>
         <div class="contentContainer">
+            <canvas id="myCanvas" width="160" height="40" style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+            <img id="myImg" src="" style="display:block; border:1px solid #d3d3d3;" alt="上海鲜花港 - 郁金香" >
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
 
+                <!--
+                ctx.fillStyle = "yellow";
+                ctx.fillRect(0, 0, 150, 50)
+                -->
+
+                <!-- ctx.setTransform(2,0, 0, 2, 0, 0); -->
+
+                ctx.font="20px Georgia";
+                ctx.fillText("Hello World!",0,0);
+
+                <!--
+                c.style.wi = 80 + 'px';
+                c.style.height = 20 + 'px';
+
+                var img = document.getElementById("myImg");
+                img.src = c.toDataURL("image/png");
+                img.height = 20;
+                -->
+            </script>
         </div>
         <div class="contentContainer">
               <p id="selfintro">Hi, My name is garric, working as a game developer now!</p>
@@ -60,6 +117,14 @@
     <!-- <div class="loader"></div> -->
     <script>
          $(document).ready(run);
+
+         var myMenu;
+         window.onload = function() {
+             myMenu = new XSidebar("my_menu");
+             myMenu.init();
+             var firstSubmenu = myMenu.submenus[0];
+             myMenu.expandMenu(firstSubmenu);
+         };
     </script>
 </body>
 </html>
